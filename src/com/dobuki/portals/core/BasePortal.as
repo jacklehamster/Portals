@@ -10,10 +10,15 @@ package com.dobuki.portals.core
 	public class BasePortal extends EventDispatcher implements IPortal
 	{
 		protected var root:DisplayObjectContainer;
+		public var _active:Boolean = false;
 		
 		public function BasePortal(root:DisplayObjectContainer)
 		{
 			this.root = root;
+		}
+		
+		public function get active():Boolean {
+			return _active;
 		}
 		
 		public function get username():String {

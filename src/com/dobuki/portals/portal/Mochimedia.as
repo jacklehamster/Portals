@@ -25,10 +25,11 @@ package com.dobuki.portals.portal
 		}
 		
 		public function setup(game_id:String,ads:Boolean=false):void {
+			this._active = true;
 			this.game_id = game_id;
 			MochiServices.connect(game_id, root);
 			if(ads)
-				MochiAd.showPreGameAd({clip:root, id:game_id, res:"400x400"});			
+				MochiAd.showPreGameAd({clip:root, id:game_id, res:root.stage.stageWidth+"x"+root.stage.stageHeight});			
 		}
 		
 		override public function postScore(score:Number, table:ScoreTable, tag:String=null):void

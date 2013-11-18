@@ -19,6 +19,7 @@ package com.dobuki.portals.portal
 		}
 		
 		public function setup():void {
+			this._active = true;
 			var apiPath:String = root.loaderInfo.parameters.kongregate_api_path || "http://www.kongregate.com/flash/API_AS3_Local.swf";
 			Security.allowDomain(apiPath);
 			

@@ -14,8 +14,10 @@ package com.dobuki.portals.portal
 			super(root);
 		}
 		
-		public function setup(apiId:String,encryptionKey:String):void {
-			API.connect(root, apiId, encryptionKey);			
+		public function setup(apiId:String=null,encryptionKey:String=null):void {
+			this._active = true;
+			if(apiId && encryptionKey)
+				API.connect(root, apiId, encryptionKey);			
 		}
 		
 		override public function postScore(score:Number,table:ScoreTable,tag:String=null):void {

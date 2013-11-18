@@ -24,6 +24,7 @@ package com.dobuki.portals.portal
 
 		public function setup(game_id:String,private_key:String):void
 		{
+			this._active = true;
 			this.game_id = game_id;
 			this.private_key = private_key;
 		}
